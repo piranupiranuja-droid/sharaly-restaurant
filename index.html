@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharaly | Restaurant Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="customer-plus.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><img src="images/sharaly-logo.png" alt="Sharaly"></a>
+  <nav>
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#features">Features</a><a href="#customer-hub">Customer+</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="login.html" class="login-link">Login</a>
+    <a href="#contact" class="order-btn">Get Started</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-nav">
+  <a href="#home">Home</a><a href="#menu">Menu</a><a href="#features">Features</a><a href="#customer-hub">Customer+</a><a href="#about">About</a><a href="#contact">Contact</a><a href="login.html">Login</a>
+</div>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-dark"></div><div class="hero-orange"></div>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">WELCOME TO SHARALY</p>
+      <h1>Good food.<br><span>Great moments.</span></h1>
+      <p class="lead">A smarter restaurant platform for menus, orders, tables, kitchen operations and customer experiences — all in one place.</p>
+      <div class="hero-buttons"><a href="#menu" class="primary-btn">Explore our menu <b>→</b></a><a href="login.html" class="outline-btn">Restaurant Login</a></div>
+      <div class="mini-points"><span>✓ Easy ordering</span><span>✓ Live kitchen flow</span><span>✓ Simple management</span></div>
+    </div>
+    <div class="dish-wrap">
+      <div class="dish-ring ring-one"></div><div class="dish-ring ring-two"></div>
+      <div class="dish-shadow"></div>
+      <div class="plate"><div class="food food-main"></div><div class="food food-side one"></div><div class="food food-side two"></div><div class="food green one"></div><div class="food green two"></div><div class="food tomato one"></div><div class="food tomato two"></div></div>
+      <div class="dish-label"><small>SHARALY SPECIAL</small><strong>Fresh · Fast · Simple</strong></div>
+    </div>
+  </div>
+  <div class="hero-circles"><span></span><span></span><span></span><span></span></div>
+  <div class="social-box"><span>f</span><span>◎</span><span>𝕏</span></div>
+</section>
+
+<section class="menu-strip" id="menu">
+  <div class="section-intro"><p>DISCOVER SHARALY</p><h2>Everything your restaurant needs.</h2></div>
+  <div class="feature-row">
+    <article class="feature-click" data-tab="menu"><div class="icon">☰</div><h3>Digital Menu</h3><p>Beautiful menus customers can browse quickly on any device.</p></article>
+    <article class="feature-click" data-tab="orders"><div class="icon">◈</div><h3>Smart Orders</h3><p>Keep dine-in, takeaway and delivery orders organized.</p></article>
+    <article class="feature-click" data-tab="kitchen"><div class="icon">♨</div><h3>Kitchen Flow</h3><p>Send orders to the kitchen and track every status.</p></article>
+    <article class="feature-click" data-tab="insights"><div class="icon">◉</div><h3>Business Insights</h3><p>Understand sales, products and restaurant activity.</p></article>
+  </div>
+</section>
+
+<section class="app-section" id="app">
+  <div class="app-shell">
+    <nav class="app-tabs">
+      <button class="app-tab-btn active" data-tab="menu">☰ Digital Menu</button>
+      <button class="app-tab-btn" data-tab="orders">◈ Smart Orders</button>
+      <button class="app-tab-btn" data-tab="kitchen">♨ Kitchen Flow</button>
+      <button class="app-tab-btn" data-tab="insights">◉ Business Insights</button>
+    </nav>
+
+    <div class="app-wrap">
+
+      <!-- ========== DIGITAL MENU ========== -->
+      <section class="app-page active" id="apppage-menu">
+        <div class="app-page-head">
+          <p class="app-eyebrow">DIGITAL MENU</p>
+          <h2>Browse the menu</h2>
+          <span>Customers can browse, filter and search the full menu on any device.</span>
+        </div>
+        <div class="app-toolbar" id="catRow"></div>
+        <div class="app-toolbar app-toolbar-search"><input class="app-search-box" id="menuSearch" placeholder="Search dishes..."></div>
+        <div class="app-menu-grid" id="menuGrid"></div>
+      </section>
+
+      <!-- ========== SMART ORDERS ========== -->
+      <section class="app-page" id="apppage-orders">
+        <div class="app-page-head">
+          <p class="app-eyebrow">SMART ORDERS</p>
+          <h2>Build an order</h2>
+          <span>Keep dine-in, takeaway and delivery orders organized in one place.</span>
+        </div>
+        <div class="app-orders-layout">
+          <div>
+            <div class="app-type-row" id="typeRow">
+              <button class="app-type-btn active" data-type="Dine-in">🍽 Dine-in</button>
+              <button class="app-type-btn" data-type="Takeaway">🥡 Takeaway</button>
+              <button class="app-type-btn" data-type="Delivery">🛵 Delivery</button>
+            </div>
+            <div class="app-table-input show" id="tableInputWrap">
+              <label>Table number</label>
+              <input type="text" id="tableNumber" placeholder="e.g. 7" maxlength="4">
+            </div>
+            <div class="app-pick-list" id="pickList"></div>
+          </div>
+          <div class="app-cart-card">
+            <h3>Current Order</h3>
+            <div class="app-cart-meta" id="cartMeta">Dine-in</div>
+            <div id="cartLines"><div class="app-cart-empty">No items yet — add something from the menu.</div></div>
+            <div class="app-cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+            <button class="app-place-btn" id="placeOrderBtn" disabled>Place Order</button>
+          </div>
+        </div>
+        <div class="app-recent-orders">
+          <h3>Recent Orders</h3>
+          <div id="recentOrdersList"><div class="app-empty-note">No orders placed yet.</div></div>
+        </div>
+      </section>
+
+      <!-- ========== KITCHEN FLOW ========== -->
+      <section class="app-page" id="apppage-kitchen">
+        <div class="app-page-head">
+          <p class="app-eyebrow">KITCHEN FLOW</p>
+          <h2>Track every order</h2>
+          <span>Orders move through the kitchen from received to served.</span>
+        </div>
+        <div class="app-kanban">
+          <div class="app-kcol"><h4>New <span class="app-count" id="cnt-new">0</span></h4><div id="col-new"></div></div>
+          <div class="app-kcol"><h4>Preparing <span class="app-count" id="cnt-preparing">0</span></h4><div id="col-preparing"></div></div>
+          <div class="app-kcol"><h4>Ready <span class="app-count" id="cnt-ready">0</span></h4><div id="col-ready"></div></div>
+          <div class="app-kcol"><h4>Completed <span class="app-count" id="cnt-completed">0</span></h4><div id="col-completed"></div></div>
+        </div>
+      </section>
+
+      <!-- ========== BUSINESS INSIGHTS ========== -->
+      <section class="app-page" id="apppage-insights">
+        <div class="app-page-head">
+          <p class="app-eyebrow">BUSINESS INSIGHTS</p>
+          <h2>Understand your restaurant</h2>
+          <span>Sales, top products and activity — updated as orders come in.</span>
+        </div>
+        <div class="app-stat-grid">
+          <div class="app-stat-card"><small>Total Revenue</small><b id="statRevenue">$0.00</b></div>
+          <div class="app-stat-card"><small>Total Orders</small><b id="statOrders">0</b></div>
+          <div class="app-stat-card"><small>Avg Order Value</small><b id="statAvg">$0.00</b></div>
+          <div class="app-stat-card"><small>Items Sold</small><b id="statItems">0</b></div>
+        </div>
+        <div class="app-insight-grid">
+          <div class="app-panel">
+            <h4>Revenue — last 7 orders</h4>
+            <div class="app-bars-chart" id="barsChart"></div>
+          </div>
+          <div class="app-panel">
+            <h4>Top selling items</h4>
+            <div id="topItems"><div class="app-empty-note">No sales yet.</div></div>
+          </div>
+        </div>
+        <div class="app-panel" style="margin-top:20px">
+          <h4>Orders by type</h4>
+          <div class="app-type-split" id="typeSplit"><div class="app-empty-note">No orders yet.</div></div>
+        </div>
+        <div class="app-reset-row"><button id="resetBtn">Reset demo data</button></div>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<div class="app-toast" id="toast">Order placed!</div>
+
+<section class="showcase" id="features">
+  <div class="showcase-card">
+    <div class="fake-window">
+      <div class="fake-head"><div class="fake-logo">S</div><strong>Sharaly Dashboard</strong><span>● Live</span></div>
+      <div class="fake-body"><aside><b>Overview</b><i>Orders</i><i>Tables</i><i>Kitchen</i><i>Customers</i><i>Reports</i></aside><div class="fake-main"><small>WEDNESDAY, SEPTEMBER 23</small><h3>Good morning, Admin</h3><div class="stats"><div><small>Revenue</small><b>$4,860</b><em>+18.4%</em></div><div><small>Orders</small><b>128</b><em>+12 today</em></div><div><small>Tables</small><b>16 / 22</b><em>6 available</em></div></div><div class="chart-card"><div class="chart-title">Weekly sales <span>7 days ▾</span></div><div class="bars"><i style="height:38%"></i><i style="height:52%"></i><i style="height:46%"></i><i style="height:65%"></i><i style="height:56%"></i><i style="height:78%"></i><i class="hot" style="height:92%"></i></div></div></div></div>
+    </div>
+  </div>
+  <div class="showcase-copy"><p class="eyebrow orange-text">BUILT FOR RESTAURANTS</p><h2>Run the busy moments with confidence.</h2><p>From the first menu view to the final order, Sharaly keeps your restaurant workflow clear and connected.</p><ul><li><b>01</b><span><strong>Manage orders</strong>Keep every order visible from placement to completion.</span></li><li><b>02</b><span><strong>Coordinate teams</strong>Give front-of-house and kitchen one shared workflow.</span></li><li><b>03</b><span><strong>See performance</strong>Turn daily activity into useful business information.</span></li></ul></div>
+</section>
+
+<section class="about" id="about"><div><p class="eyebrow orange-text">WHY SHARALY</p><h2>Made to feel as smooth as a great dining experience.</h2></div><p>Sharaly combines a clean customer experience with practical restaurant tools. The interface is designed to be simple enough for everyday staff while giving owners a clear view of what is happening.</p></section>
+
+<section class="cta" id="contact"><div><p class="eyebrow">READY TO START?</p><h2>Make your restaurant workflow simpler.</h2><p>Connect your restaurant team with one modern platform.</p></div><div><a href="login.html" class="primary-btn">Open Restaurant Login →</a></div></section>
+
+<section class="customer-hub" id="customer-hub">
+  <div class="customer-head">
+    <div>
+      <p class="eyebrow dark-eyebrow">CUSTOMER EXPERIENCE+</p>
+      <h2>More than an online menu.</h2>
+      <p>Sharaly adds customer-friendly ordering tools that go beyond a basic restaurant ordering page.</p>
+    </div>
+    <div class="hub-badge">SHARALY <span>PLUS</span></div>
+  </div>
+
+  <div class="customer-grid">
+    <article class="customer-card wide">
+      <div class="card-title"><span>🔎 Smart discovery</span><small>Fast ordering</small></div>
+      <div class="customer-search-row">
+        <input id="hubSearch" type="search" placeholder="Search food, category or favourite...">
+        <button id="clearHubSearch">Clear</button>
+      </div>
+      <div class="hub-tags">
+        <button class="hub-tag active" data-filter="all">All</button>
+        <button class="hub-tag" data-filter="veg">Vegetarian</button>
+        <button class="hub-tag" data-filter="popular">Popular</button>
+        <button class="hub-tag" data-filter="offers">Offers</button>
+      </div>
+      <div id="hubFoodGrid" class="hub-food-grid"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>❤️ Favourites</span><small id="favCount">0 saved</small></div>
+      <p>Customers can save favourite dishes and quickly order them again.</p>
+      <div id="favList" class="mini-list"><span class="empty-hub">No favourites yet.</span></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🎁 Loyalty wallet</span><small>Customer rewards</small></div>
+      <div class="points-box"><strong id="hubPoints">120</strong><span>points</span></div>
+      <p>Earn points from orders and redeem a reward when enough points are collected.</p>
+      <button class="hub-action" id="redeemBtn">Redeem 100 points</button>
+      <div id="redeemMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🏷️ Offers & coupons</span><small>Instant discount</small></div>
+      <div class="coupon-box"><b>SHARALY10</b><span>10% off demo coupon</span></div>
+      <div class="coupon-row"><input id="couponInput" placeholder="Enter coupon"><button id="applyCoupon">Apply</button></div>
+      <div id="couponMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>📍 Live order tracking</span><small>Customer view</small></div>
+      <div class="track-order">
+        <div class="track-id">Order <b id="trackOrderId">SH-104</b></div>
+        <div class="track-line"><span class="done"></span><span class="done"></span><span class="current"></span><span></span></div>
+        <div class="track-labels"><span>Received</span><span>Kitchen</span><span>Ready</span><span>Delivered</span></div>
+      </div>
+      <button class="hub-action" id="nextTrack">Move to next status</button>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🕒 Schedule your order</span><small>Flexible pickup</small></div>
+      <div class="schedule-row">
+        <label>Date<input id="scheduleDate" type="date"></label>
+        <label>Time<input id="scheduleTime" type="time"></label>
+      </div>
+      <button class="hub-action" id="scheduleBtn">Schedule order</button>
+      <div id="scheduleMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🔁 One-tap reorder</span><small>Order history</small></div>
+      <div class="reorder-box">
+        <div><b>Last order · SH-102</b><span>Chicken 65 · Garlic Naan · Lime Soda</span></div>
+        <button class="hub-action" id="reorderBtn">Reorder</button>
+      </div>
+      <div id="reorderMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🚚 Delivery estimator</span><small>Clear checkout</small></div>
+      <div class="distance-row">
+        <input id="distanceInput" type="number" min="0" step="0.1" value="3" placeholder="Distance">
+        <span>km</span>
+        <button id="calcDelivery">Calculate</button>
+      </div>
+      <div class="delivery-result">Estimated delivery fee: <strong id="deliveryFee">$2.00</strong></div>
+    </article>
+
+
+    <article class="customer-card">
+      <div class="card-title"><span>📱 QR Table Ordering</span><small>Scan & order</small></div>
+      <p>Each table can have its own QR link so guests can open the menu and order without waiting for staff.</p>
+      <div class="qr-demo"><img id="tableQr" alt="Sharaly table QR code"><div><b>Table <span id="qrTableLabel">07</span></b><span>Scan to open Sharaly menu</span></div></div>
+      <div class="qr-row"><input id="qrTableInput" type="number" min="1" value="7" placeholder="Table"><button id="generateQr">Generate</button></div>
+      <div id="qrMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>📅 Table Reservations</span><small>Book a table</small></div>
+      <div class="reservation-form">
+        <label>Date<input id="reservationDate" type="date"></label>
+        <label>Time<input id="reservationTime" type="time" value="19:00"></label>
+        <label>Guests<select id="reservationGuests"><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+      </div>
+      <button class="hub-action" id="reserveBtn">Reserve table</button>
+      <div id="reservationMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>💳 Checkout & Payments</span><small>Flexible payment</small></div>
+      <div class="payment-options">
+        <button class="pay-option active" data-pay="Cash">💵 Cash</button>
+        <button class="pay-option" data-pay="Card">💳 Card</button>
+        <button class="pay-option" data-pay="Online">📲 Online</button>
+      </div>
+      <div class="payment-summary"><span>Demo order total</span><strong>$24.90</strong></div>
+      <button class="hub-action" id="payBtn">Continue with Cash</button>
+      <div id="paymentMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>📍 Delivery Zones</span><small>Smart delivery</small></div>
+      <div class="zone-list">
+        <div><b>Zone A</b><span>0–3 km · $2.00</span><em>Available</em></div>
+        <div><b>Zone B</b><span>3–7 km · $4.50</span><em>Available</em></div>
+        <div><b>Zone C</b><span>7–12 km · $7.00</span><em>Check area</em></div>
+      </div>
+      <div class="zone-check"><input id="zoneDistance" type="number" min="0" step=".1" value="4" placeholder="Distance in km"><button id="zoneCheckBtn">Check</button></div>
+      <div id="zoneMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🏪 Multi-location</span><small>One platform</small></div>
+      <p>Manage multiple restaurant branches while customers choose the location closest to them.</p>
+      <select id="locationSelect" class="hub-select">
+        <option>Sharaly — Vavuniya</option>
+        <option>Sharaly — Jaffna</option>
+        <option>Sharaly — Colombo</option>
+      </select>
+      <div class="location-status"><span>●</span><b id="locationName">Vavuniya branch</b><small>Open · 9:00 AM – 10:00 PM</small></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>👨‍🍳 Staff & Kitchen</span><small>Team workflow</small></div>
+      <div class="staff-list">
+        <div><span class="staff-avatar">A</span><div><b>Kitchen Admin</b><small>Kitchen · Active</small></div><em>Online</em></div>
+        <div><span class="staff-avatar">S</span><div><b>Service Staff</b><small>Orders · Active</small></div><em>Online</em></div>
+        <div><span class="staff-avatar">D</span><div><b>Delivery Team</b><small>Delivery · Active</small></div><em>Ready</em></div>
+      </div>
+      <button class="hub-action" id="staffDemoBtn">Open team workflow</button>
+      <div id="staffMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card">
+      <div class="card-title"><span>🧾 Receipt & Invoice</span><small>Instant receipt</small></div>
+      <div class="receipt-preview">
+        <div><b>SHARALY</b><span>Order #SH-104</span></div>
+        <p>Chicken 65 × 1 <b>$7.20</b></p>
+        <p>Garlic Naan × 2 <b>$6.40</b></p>
+        <p>Delivery <b>$2.00</b></p>
+        <hr><p><strong>Total</strong><strong>$15.60</strong></p>
+      </div>
+      <button class="hub-action" id="receiptBtn">Print receipt</button>
+      <div id="receiptMsg" class="hub-msg"></div>
+    </article>
+
+    <article class="customer-card wide">
+      <div class="card-title"><span>⭐ Customer feedback</span><small>Build trust</small></div>
+      <div class="review-layout">
+        <div class="rating-big"><strong>4.8</strong><span>★★★★★</span><small>Demo customer rating</small></div>
+        <div class="review-form">
+          <select id="reviewRating"><option value="5">★★★★★ Excellent</option><option value="4">★★★★ Very good</option><option value="3">★★★ Good</option><option value="2">★★ Needs work</option><option value="1">★ Poor</option></select>
+          <input id="reviewName" placeholder="Your name">
+          <textarea id="reviewText" rows="3" placeholder="Write a short review"></textarea>
+          <button class="hub-action" id="reviewBtn">Post review</button>
+        </div>
+        <div id="reviewList" class="review-list"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+<footer><img src="images/sharaly-logo.png" alt="Sharaly"><span>© 2026 Sharaly. Restaurant platform concept.</span><div><a href="#features">Features</a><a href="#customer-hub">Customer+</a><a href="#contact">Contact</a><a href="login.html">Login</a></div></footer>
+<script src="script.js"></script>
+<script src="customer-plus.js"></script>
+</body>
+</html>

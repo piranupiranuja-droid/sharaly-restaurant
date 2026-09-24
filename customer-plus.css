@@ -1,0 +1,60 @@
+
+/* Sharaly Customer+ — extra customer-facing features */
+.customer-hub{background:#faf6f0;color:#161c33;padding:95px 6% 110px}
+.customer-head{max-width:1180px;margin:0 auto 45px;display:flex;justify-content:space-between;gap:30px;align-items:end}
+.customer-head h2{font:700 clamp(38px,5vw,58px)/1.05 'Manrope',sans-serif;margin:8px 0 12px}
+.customer-head p:last-child{max-width:700px;color:#777;line-height:1.7}
+.dark-eyebrow{color:#dd5c14!important}
+.hub-badge{background:#161c33;color:#fff;padding:15px 20px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}
+.hub-badge span{color:#f0782d;margin-left:5px}
+.customer-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.customer-card{background:#fff;border:1px solid #f1e0c8;padding:25px;border-radius:8px;box-shadow:0 10px 25px rgba(45,32,18,.04)}
+.customer-card.wide{grid-column:1/-1}
+.card-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-weight:800}
+.card-title small{font-size:10px;letter-spacing:.08em;color:#8f7d63;text-transform:uppercase}
+.customer-card p{color:#777;font-size:13px;line-height:1.65}
+.customer-search-row,.coupon-row,.distance-row{display:flex;gap:8px}
+.customer-search-row input,.coupon-row input,.distance-row input,.review-form input,.review-form textarea,.review-form select,.schedule-row input{border:1px solid #f1e0c8;background:#fdf4ea;border-radius:5px;padding:12px;outline:none;font:inherit}
+.customer-search-row input{flex:1}.customer-search-row button,.coupon-row button,.distance-row button{border:0;background:#161c33;color:#fff;border-radius:5px;padding:0 15px;cursor:pointer}
+.hub-tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}
+.hub-tag{border:1px solid #f1e0c8;background:#fff;padding:7px 11px;border-radius:999px;font-size:11px;cursor:pointer}
+.hub-tag.active,.hub-tag:hover{background:#f0782d;border-color:#f0782d}
+.hub-food-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hub-food{border:1px solid #f1e0c8;border-radius:6px;overflow:hidden;background:#fff}
+.hub-food img{width:100%;height:120px;object-fit:cover;display:block}
+.hub-food-body{padding:10px}.hub-food-body b{font-size:13px}.hub-food-body span{display:block;color:#888;font-size:11px;margin:4px 0}
+.hub-food-actions{display:flex;justify-content:space-between;align-items:center}.hub-food-actions button{border:0;background:#f2eee8;padding:6px 8px;border-radius:4px;cursor:pointer}
+.hub-food-actions .heart{font-size:16px}.mini-list{display:grid;gap:8px}.mini-fav{display:flex;justify-content:space-between;padding:10px;background:#fdf4ea;border-radius:5px;font-size:12px}.empty-hub{color:#999;font-size:12px}
+.points-box{display:flex;align-items:baseline;gap:8px}.points-box strong{font-size:42px;font-family:'Manrope',sans-serif}.points-box span{color:#dd5c14;font-weight:800}
+.hub-action{border:0;background:#161c33;color:#fff;padding:10px 14px;border-radius:5px;cursor:pointer;font-weight:700;font-size:11px}
+.hub-action:hover{background:#f0782d;color:#161c33}
+.coupon-box{background:#fdf0e2;border:1px dashed #f0782d;padding:14px;border-radius:5px;margin-bottom:10px}.coupon-box b{display:block;letter-spacing:.12em}.coupon-box span{font-size:11px;color:#a35500}
+.coupon-row input{flex:1}.hub-msg{font-size:11px;color:#a35500;min-height:18px;margin-top:8px}
+.track-order{margin:16px 0}.track-id{font-size:12px}.track-line{display:grid;grid-template-columns:repeat(4,1fr);height:8px;background:#f1e0c8;margin:18px 0 8px;border-radius:10px;overflow:hidden}.track-line span{display:block}.track-line .done{background:#161c33}.track-line .current{background:#f0782d}.track-labels{display:grid;grid-template-columns:repeat(4,1fr);font-size:9px;color:#888}
+.schedule-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.schedule-row label{font-size:10px;font-weight:800;display:grid;gap:5px}.schedule-row input{width:100%}
+.reorder-box{display:flex;justify-content:space-between;gap:15px;align-items:center;background:#fdf4ea;padding:15px;border-radius:6px}.reorder-box span{display:block;color:#777;font-size:11px;margin-top:5px}
+.distance-row input{width:100px}.distance-row span{display:grid;place-items:center;color:#888;font-size:12px}.delivery-result{margin-top:15px;font-size:12px}.delivery-result strong{font-size:18px}
+.review-layout{display:grid;grid-template-columns:150px 1fr 1fr;gap:20px;align-items:start}.rating-big{display:grid;gap:4px}.rating-big strong{font:700 48px 'Manrope',sans-serif}.rating-big span{color:#f0782d;letter-spacing:2px}.rating-big small{color:#999;font-size:10px}.review-form{display:grid;gap:8px}.review-form input,.review-form textarea,.review-form select{width:100%;font-size:12px}.review-list{display:grid;gap:8px}.review-item{background:#fdf4ea;padding:12px;border-radius:5px;font-size:11px}.review-item b{display:block;margin-bottom:4px}.review-item span{color:#dd5c14}
+@media(max-width:900px){.customer-grid{grid-template-columns:1fr}.customer-card.wide{grid-column:auto}.hub-food-grid{grid-template-columns:repeat(2,1fr)}.review-layout{grid-template-columns:1fr}.customer-head{align-items:start;flex-direction:column}}
+@media(max-width:560px){.customer-hub{padding:65px 5%}.customer-search-row{flex-wrap:wrap}.customer-search-row input{width:100%;flex:auto;height:45px}.customer-search-row button{height:40px}.hub-food-grid{grid-template-columns:1fr}.schedule-row{grid-template-columns:1fr}.distance-row{flex-wrap:wrap}}
+
+
+/* ================= RESTAURANT PRO+ FEATURES ================= */
+.qr-demo{display:flex;align-items:center;gap:14px;margin:14px 0;padding:12px;background:#faf7f2;border:1px solid #eadfce;border-radius:12px}
+.qr-demo img{width:78px;height:78px;border-radius:8px;background:#fff;padding:4px}
+.qr-demo div{display:grid;gap:4px}.qr-demo span,.location-status small{display:block;color:#858998;font-size:11px}
+.qr-row,.zone-check{display:flex;gap:8px}.qr-row input,.zone-check input{flex:1;min-width:0}
+.qr-row button,.zone-check button,.coupon-row button,.distance-row button{border:0;border-radius:8px;background:var(--orange,#f0782d);color:#fff;font-weight:800;padding:0 14px;cursor:pointer}
+.reservation-form{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.reservation-form label{font-size:10px;color:#747987;font-weight:700;display:grid;gap:5px}
+.reservation-form label:last-child{grid-column:1/-1}
+.reservation-form input,.reservation-form select,.hub-select{width:100%;height:40px;border:1px solid #eadfce;border-radius:8px;background:#fff;padding:0 10px;color:#30364a}
+.payment-options{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:14px 0}
+.pay-option{border:1px solid #eadfce;background:#fff;border-radius:9px;padding:10px 5px;cursor:pointer;font-size:11px}
+.pay-option.active{border-color:var(--orange,#f0782d);background:#fff4ea}
+.payment-summary{display:flex;justify-content:space-between;padding:12px;background:#faf7f2;border-radius:9px;margin-bottom:10px;font-size:12px}
+.zone-list{display:grid;gap:7px;margin:12px 0}.zone-list div{display:grid;grid-template-columns:1fr 1.3fr auto;align-items:center;gap:8px;padding:9px;background:#faf7f2;border-radius:8px;font-size:10px}.zone-list span{color:#777d8a}.zone-list em{font-style:normal;color:#16895d;font-weight:700}
+.location-status{margin-top:12px;padding:12px;background:#faf7f2;border-radius:9px}.location-status span{color:#1b9b67;margin-right:7px}.location-status b{font-size:12px}.location-status small{margin:4px 0 0 17px}
+.staff-list{display:grid;gap:8px;margin:12px 0}.staff-list>div{display:flex;align-items:center;gap:9px}.staff-avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff0e5;color:#d95e19;font-weight:800;font-size:11px}.staff-list div div{flex:1;display:grid}.staff-list small{color:#858998;font-size:9px}.staff-list em{font-style:normal;color:#16895d;font-size:9px;font-weight:800}
+.receipt-preview{padding:13px;background:#fff;border:1px dashed #d9cdbb;border-radius:8px;margin:12px 0;font-size:10px}.receipt-preview>div,.receipt-preview p{display:flex;justify-content:space-between;gap:8px;margin:5px 0}.receipt-preview>div{margin-bottom:10px}.receipt-preview hr{border:0;border-top:1px dashed #ddd;margin:8px 0}
+@media(max-width:600px){.reservation-form{grid-template-columns:1fr}.reservation-form label:last-child{grid-column:auto}.zone-list div{grid-template-columns:1fr 1fr}.zone-list em{grid-column:2}.payment-options{grid-template-columns:1fr}}

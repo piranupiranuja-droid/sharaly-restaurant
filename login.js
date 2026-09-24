@@ -1,0 +1,3 @@
+const toggle=document.getElementById('toggle');const password=document.getElementById('password');const form=document.getElementById('loginForm');const message=document.getElementById('message');
+toggle.addEventListener('click',()=>{const show=password.type==='password';password.type=show?'text':'password';toggle.textContent=show?'Hide':'Show'});
+form.addEventListener('submit',e=>{e.preventDefault();const email=document.getElementById('email').value.trim();const pass=password.value.trim();if(email==='admin@sharaly.com'&&pass==='123456'){message.textContent='Demo login successful. Connect PHP/MySQL for real authentication.';message.style.color='#16895d'}else{message.textContent='Demo account: admin@sharaly.com / 123456';message.style.color='#b46a00'}});
